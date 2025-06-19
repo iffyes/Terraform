@@ -1,7 +1,7 @@
 variable "instance_name" {
   description = "Default name for instance"
   type        = string
-  default     = "hello-server"
+  default     = "irf-hello-server"
 }
 
 variable "instance_type" {
