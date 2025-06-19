@@ -4,7 +4,7 @@ terraform {
 backend "s3" {
     bucket         = "project1-exampleapp"
     key            = "appserver/terraform.tf"
-    region         = "eu-north-1"
+    region         = "ap-southeast-2"
     encrypt        = true
 #    dynamodb_table = "your-dynamodb-table-name"  # Optional, for state locking
   }
@@ -21,13 +21,13 @@ backend "s3" {
 
 provider "aws" {
 #  region  = "us-west-2"
-   region  = "eu-north-1"
+   region  = "ap-southeast-2"
 }
 
 resource "aws_instance" "app_server" {
 #  ami           = "ami-0da4b082c0455e0a0"
   count     	 = 3
-  ami           = "ami-0f174d97d7d7a029b"
+  ami           = "ami-00543daa0ad4d3ea4"
   instance_type = var.instance_type
 
   tags = {
